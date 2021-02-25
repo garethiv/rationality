@@ -1,7 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
+import { graphql } from "gatsby"
+import Sidebar from "../components/sidebar"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -16,24 +15,36 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-        <hr />
-        <footer>
-          <Bio />
+      <div class='index-wrapper'>
+        <div class='index-column-l'>
+          <div class='left-column'>
+            <Sidebar />
+          </div>
+        </div>
+        <div class='index-column-r'>
+          <div class='right-column'>
+            <article
+              className="blog-post"
+              itemScope
+              itemType="http://schema.org/Article"
+            >
+              <header>
+                <h1 itemProp="headline">{post.frontmatter.title}</h1>
+                <p>{post.frontmatter.date}</p>
+              </header>
+              <section
+                dangerouslySetInnerHTML={{ __html: post.html }}
+                itemProp="articleBody"
+              />
+            </article>
+          </div>
+          <footer>
+          © {new Date().getFullYear()} Rationality
+          {` `}
         </footer>
-      </article>
+        </div>
+      </div>
+      {/* TODO: ADD RELATED POSTS HERE
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -60,6 +71,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
+      */}
     </Layout>
   )
 }

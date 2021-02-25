@@ -54,7 +54,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <Link style={{ textDecoration: `none` }} to={`/`} itemProp="url">
-        <h2>rationality</h2>                      
+        <h2>rationality</h2>                 
       </Link>
       
       

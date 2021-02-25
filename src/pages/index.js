@@ -26,9 +26,11 @@ const BlogIndex = ({ data, location }) => {
         <div class='index-column-r'>
           <div class='right-column'>
             <QAndA />
-            <h3 style={{textDecoration:`none`}}>
+            {/*<h3 style={{textDecoration:`none`}}>
               ................................
-            </h3>
+            </h3>*/}
+            <br />
+            <hr />
             <ol style={{ listStyle: `none` }}>
               {posts.map(post => {
                 const title = post.frontmatter.title.toLowerCase() || post.fields.slug.toLowerCase()
