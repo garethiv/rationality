@@ -7,7 +7,7 @@
   --maxWidth-md: 28rem;
   --maxWidth-lg: 32rem;
   --maxWidth-xl: 36rem;
-  --maxWidth-2xl: 42rem;
+  --maxWidth-2xl: 62rem;
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
@@ -243,7 +243,7 @@ a:focus {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  padding: var(--spacing-10) var(--spacing-0);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -330,4 +330,38 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+
+/* Index layout */
+.index-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.index-column-l {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 0.4;
+}
+
+.index-column-r {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.left-column {
+  background-color: blue;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+.right-column {
+  background-color: green;
+  padding-top: 2rem;
 }
