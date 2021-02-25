@@ -133,6 +133,7 @@ h2 {
 h3 {
   font-size: var(--fontSize-3);
   text-decoration: underline;
+  margin-top: var(--spacing-4);
 }
 /* q&a titles */
 h4 {
@@ -276,6 +277,7 @@ a:focus {
 
 .post-list-item p {
   margin-bottom: var(--spacing-0);
+  font-size: var(--fontSize-1);
 }
 
 .post-list-item h2 {
@@ -286,7 +288,19 @@ a:focus {
 }
 
 .post-list-item header {
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-1);
+}
+
+.post-list-section p {
+  margin-bottom: var(--spacing-0);
+  font-size: var(--fontSize-1);
+}
+
+.post-desc {
+  text-transform: lowercase;
+  margin: var(--spacing-0);
+  padding: var(--spacing-0);
+  font-size: 0.5rem;
 }
 
 .header-link-home {

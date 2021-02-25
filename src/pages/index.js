@@ -26,10 +26,12 @@ const BlogIndex = ({ data, location }) => {
         <div class='index-column-r'>
           <div class='right-column'>
             <QAndA />
-            <h3>posts</h3>
+            <h3 style={{textDecoration:`none`}}>
+              ................................
+            </h3>
             <ol style={{ listStyle: `none` }}>
               {posts.map(post => {
-                const title = post.frontmatter.title || post.fields.slug
+                const title = post.frontmatter.title.toLowerCase() || post.fields.slug.toLowerCase()
 
                 return (
                   <li key={post.fields.slug}>
@@ -44,16 +46,18 @@ const BlogIndex = ({ data, location }) => {
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h5>
-                        <small>{post.frontmatter.date}</small>
+                        <small>{post.frontmatter.date.toLowerCase()}</small>
                       </header>
-                      {/*<section>
-                        <p
+                      <section
+                        className="post-list-section"
+                      >
+                        <p className="post-desc"
                           dangerouslySetInnerHTML={{
                             __html: post.frontmatter.description || post.excerpt,
                           }}
                           itemProp="description"
                         />
-                        </section>*/}
+                      </section>
                     </article>
                   </li>
                 )

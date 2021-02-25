@@ -59,6 +59,8 @@ const Sidebar = () => {
       
       
       {/*TODO: LIST OF TAGS*/}
+      {/*TODO: ADD LOGO*/}
+      {/*
       {avatar && (
         <Image
           fixed={avatar}
@@ -69,7 +71,7 @@ const Sidebar = () => {
           }}
         />
       )}
-      <br/>
+        <br/>*/}
       <h3>
         <a href="https://twitter.com/garethveale" target="_blank" rel="noopener noreferrer">
           twitter 
