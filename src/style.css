@@ -54,7 +54,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: black;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -121,22 +121,31 @@ h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
   color: var(--color-heading-black);
+  margin-top: 0;
 }
-
+/* side bar title */
 h2 {
   font-size: var(--fontSize-5);
+  font-weight: var(--fontWeight-black);
+  color: var(--color-heading-black);
 }
-
+/* side bar links */
 h3 {
-  font-size: var(--fontSize-4);
-}
-
-h4 {
   font-size: var(--fontSize-3);
+  text-decoration: underline;
 }
-
+/* q&a titles */
+h4 {
+  font-size: var(--fontSize-1);
+  margin-bottom: 0.1rem;
+  margin-top: 1rem;
+}
+/* post list titles */
 h5 {
   font-size: var(--fontSize-2);
+  margin-bottom: 0.1rem;
+  margin-top: 1rem;
+  font-weight: var(--fontWeight-black);
 }
 
 h6 {
@@ -163,7 +172,7 @@ p {
   line-height: var(--lineHeight-relaxed);
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
+  margin: var(--spacing-0);
   padding: var(--spacing-0);
 }
 
@@ -231,11 +240,12 @@ table thead tr th {
 
 a {
   color: var(--color-primary);
+  text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-  text-decoration: none;
+  background-color: lightgrey;
 }
 
 /* Custom classes */
@@ -355,13 +365,15 @@ a:focus {
 }
 
 .left-column {
-  background-color: blue;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: 2rem;
 }
 
 .right-column {
-  background-color: green;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
+}
+
+/* QANDA */
+.qanda {
+  margin-top: var(--spacing-12);
 }

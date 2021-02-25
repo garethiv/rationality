@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
 const Sidebar = () => {
@@ -53,8 +53,11 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <p>RATIONALITY</p>
-      <p>LOGO HERE.</p>
+      <Link style={{ textDecoration: `none` }} to={`/`} itemProp="url">
+        <h2>rationality</h2>                      
+      </Link>
+      
+      
       {/*TODO: LIST OF TAGS*/}
       {avatar && (
         <Image
@@ -66,6 +69,12 @@ const Sidebar = () => {
           }}
         />
       )}
+      <br/>
+      <h3>
+        <a href="https://twitter.com/garethveale" target="_blank" rel="noopener noreferrer">
+          twitter 
+        </a>
+      </h3>     
     </div>
   )
 }

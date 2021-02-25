@@ -26,6 +26,7 @@ const BlogIndex = ({ data, location }) => {
         <div class='index-column-r'>
           <div class='right-column'>
             <QAndA />
+            <h3>posts</h3>
             <ol style={{ listStyle: `none` }}>
               {posts.map(post => {
                 const title = post.frontmatter.title || post.fields.slug
@@ -38,27 +39,31 @@ const BlogIndex = ({ data, location }) => {
                       itemType="http://schema.org/Article"
                     >
                       <header>
-                        <h2>
+                        <h5>
                           <Link to={post.fields.slug} itemProp="url">
                             <span itemProp="headline">{title}</span>
                           </Link>
-                        </h2>
+                        </h5>
                         <small>{post.frontmatter.date}</small>
                       </header>
-                      <section>
+                      {/*<section>
                         <p
                           dangerouslySetInnerHTML={{
                             __html: post.frontmatter.description || post.excerpt,
                           }}
                           itemProp="description"
                         />
-                      </section>
+                        </section>*/}
                     </article>
                   </li>
                 )
               })}
             </ol>
           </div>
+          <footer>
+          © {new Date().getFullYear()} Rationality
+          {` `}
+        </footer>
         </div>
       </div>
     </Layout>
