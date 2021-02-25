@@ -30,6 +30,20 @@ const Sidebar = () => {
           }
         }
       }
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        nodes {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            tags
+            description
+          }
+        }
+      }
     }
   `)
 
@@ -41,7 +55,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <p>RATIONALITY</p>
       <p>LOGO HERE.</p>
-      <p>LIST OF TAGS</p>
+      {/*TODO: LIST OF TAGS*/}
       {avatar && (
         <Image
           fixed={avatar}
