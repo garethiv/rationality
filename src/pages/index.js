@@ -48,7 +48,10 @@ const BlogIndex = ({ data, location }) => {
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h5>
-                        <small>{post.frontmatter.date.toLowerCase()}</small>
+                        <small>{post.frontmatter.date.toLowerCase()}</small> • 
+                        <small> {post.frontmatter.tags.toLowerCase()}</small> • 
+                        <small> {post.frontmatter.minread} min read ☕ </small>
+
                       </header>
                       <section
                         className="post-list-section"
@@ -95,6 +98,8 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          minread
+          tags
         }
       }
     }
